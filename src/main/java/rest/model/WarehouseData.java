@@ -2,14 +2,22 @@ package rest.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List; //Liste importiert
 
 public class WarehouseData {
 	
 	private String warehouseID;
 	private String warehouseName;
+    //weitere Attribute erstellt
+    private String warehouseAddress;
+    private String warehousePostalCode;
+    private String warehouseCity;
+    private String warehouseCountry;
 	private String timestamp;
+    private List<ProductData> products;
 
-	/**
+
+    /**
 	 * Constructor
 	 */
 	public WarehouseData() {
@@ -45,7 +53,47 @@ public class WarehouseData {
 		this.timestamp = timestamp;
 	}
 
-	/**
+    public String getWarehouseAddress() {
+        return warehouseAddress;
+    }
+
+    public void setWarehouseAddress(String warehouseAddress) {
+        this.warehouseAddress = warehouseAddress;
+    }
+
+    public String getWarehousePostalCode() {
+        return warehousePostalCode;
+    }
+
+    public void setWarehousePostalCode(String warehousePostalCode) {
+        this.warehousePostalCode = warehousePostalCode;
+    }
+
+    public String getWarehouseCity() {
+        return warehouseCity;
+    }
+
+    public void setWarehouseCity(String warehouseCity) {
+        this.warehouseCity = warehouseCity;
+    }
+
+    public String getWarehouseCountry() {
+        return warehouseCountry;
+    }
+
+    public void setWarehouseCountry(String warehouseCountry) {
+        this.warehouseCountry = warehouseCountry;
+    }
+
+    public List<ProductData> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<ProductData> products) {
+        this.products = products;
+    }
+
+    /**
 	 * Methods
 	 */
 	@Override

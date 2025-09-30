@@ -27,5 +27,10 @@ public class WarehouseController {
     public WarehouseData warehouseData( @PathVariable String inID ) {
         return service.getWarehouseData( inID );
     }
+    // Produces XML response
+    @RequestMapping(value="/warehouse/{inID}/xml", produces = MediaType.APPLICATION_XML_VALUE)
+    public WarehouseData warehouseDataXml(@PathVariable String inID) {
+        return service.getWarehouseData(inID);
+    }
 
 }
